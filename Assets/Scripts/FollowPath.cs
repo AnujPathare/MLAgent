@@ -33,12 +33,12 @@ public class FollowPath : MonoBehaviour
     {
         coroutineAllowed = false;
 
-        Vector3 p0 = routes[routeNum].GetChild(0).position;
+        Vector3 p0 = routes[routeNum].GetChild(0).localPosition;
         Vector3 p1 = new Vector3(Random.Range(0f,4f),0.44f,Random.Range(-2.5f,0f));
         //Vector3 p1 = routes[routeNum].GetChild(1).position;
         Vector3 p2 = new Vector3(Random.Range(-3f, 0f), 0.44f, Random.Range(0f, 3f));
         //Vector3 p2 = routes[routeNum].GetChild(2).position;
-        Vector3 p3 = routes[routeNum].GetChild(3).position;
+        Vector3 p3 = routes[routeNum].GetChild(3).localPosition;
 
         while (tParam <= 1)
         {
@@ -46,7 +46,7 @@ public class FollowPath : MonoBehaviour
             //tParam += 0.005f;
             objectPosition = Mathf.Pow(1 - tParam, 3) * p0 + 3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 + 3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 + Mathf.Pow(tParam, 3) * p3;
             
-            transform.position = new Vector3(objectPosition.x, 0.35f, objectPosition.z);
+            transform.localPosition = new Vector3(objectPosition.x, 0.35f, objectPosition.z);
             
 
             

@@ -2,22 +2,22 @@
     "BoatAgent": {
         "checkpoints": [
             {
-                "steps": 1732,
-                "file_path": "results\\boatAgent3\\BoatAgent\\BoatAgent-1732.onnx",
-                "reward": null,
-                "creation_time": 1663162322.570719,
+                "steps": 78734,
+                "file_path": "results\\boatAgent3\\BoatAgent\\BoatAgent-78734.onnx",
+                "reward": -1.0,
+                "creation_time": 1663163900.5264928,
                 "auxillary_file_paths": [
-                    "results\\boatAgent3\\BoatAgent\\BoatAgent-1732.pt"
+                    "results\\boatAgent3\\BoatAgent\\BoatAgent-78734.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1732,
+            "steps": 78734,
             "file_path": "results\\boatAgent3\\BoatAgent.onnx",
-            "reward": null,
-            "creation_time": 1663162322.570719,
+            "reward": -1.0,
+            "creation_time": 1663163900.5264928,
             "auxillary_file_paths": [
-                "results\\boatAgent3\\BoatAgent\\BoatAgent-1732.pt"
+                "results\\boatAgent3\\BoatAgent\\BoatAgent-78734.pt"
             ]
         }
     },

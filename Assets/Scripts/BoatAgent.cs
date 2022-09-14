@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using UnityEngine.UI;
 
 public class BoatAgent : Agent
 {
@@ -11,13 +12,15 @@ public class BoatAgent : Agent
     [SerializeField] private GameObject pointA;
     [SerializeField] private GameObject pointB;
     [SerializeField] private GameObject boat;
+    [SerializeField] private GameObject episode;
     private int epNo = 0;
-
+    private float accuracy = 0;
 
     public override void OnEpisodeBegin()
     {
         epNo += 1;
-        Debug.Log(epNo);
+        Debug.Log(epNo+ " accuracy: " + accuracy/epNo * 100 + "%");
+        episode.GetComponent<Text>().text = "Episode: " + epNo;
         pointB.transform.localPosition = new Vector3(Random.Range(-1.6f, 1.3f), 0.41f, Random.Range(2.5f, 4f));
         GameObject.Find("BoatParent").transform.localPosition = new Vector3(-3f, 0.7f, -3f);
        
@@ -28,7 +31,7 @@ public class BoatAgent : Agent
     {
         sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(targetTransform.localPosition);
-        sensor.AddObservation(pointA.transform.localPosition);
+        //sensor.AddObservation(pointA.transform.localPosition);
         sensor.AddObservation(pointB.transform.localPosition);
     }
 
@@ -72,6 +75,7 @@ public class BoatAgent : Agent
             SetReward(+2.0f);
             boat.GetComponent<Renderer>().material.color = Color.green;
             EndEpisode();
+            accuracy += 1;
 
         }
 

@@ -23,8 +23,9 @@ public class BoatAgent : Agent
         Debug.Log(epNo + " accuracy: " + accuracy / epNo * 100 + "%");
         //episode.GetComponent<Text>().text = "Episode: " + epNo;
         pointB.transform.localPosition = new Vector3(Random.Range(-1.6f, 1.3f), 0.41f, Random.Range(2.5f, 4f));
-        transform.parent.transform.localPosition = new Vector3(-3f, 0.7f, -3f);
-        
+        transform.parent.transform.localPosition = new Vector3(-2f, 0.53f, -4f);
+        transform.localPosition = new Vector3(0, 0, 0);
+        //transform.Rotate(0, 0, 0);
         //transform.position = pointA.transform.position + new Vector3(0.5f, 0, 0.5f);
 
     }

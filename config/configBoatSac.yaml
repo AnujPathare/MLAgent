@@ -1,0 +1,20 @@
+behaviors:
+  BoatAgent:
+    trainer_type: sac
+    summary_freq: 10000
+    max_steps: 6e6
+    time_horizon: 450
+    threaded: false
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+    hyperparameters:
+      learning_rate: 5e-4
+      learning_rate_schedule: constant
+      batch_size: 1024
+      buffer_size: 1000000
+      buffer_init_steps: 5000
+      init_entcoef: 0.7
+      steps_per_update: 10
+      tau: 0.005

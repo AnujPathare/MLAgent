@@ -8,14 +8,14 @@ using UnityEngine.UI;
 
 public class BoatAgent : Agent
 {
-    [SerializeField] private Transform targetTransform;
-    [SerializeField] private GameObject pointA;
+    //[SerializeField] private Transform targetTransform;
+    //[SerializeField] private GameObject pointA;
     [SerializeField] private GameObject pointB;
     [SerializeField] private GameObject boat;
     //[SerializeField] private GameObject episode;
     private int epNo = 0;
     private float accuracy = 0;
-    [SerializeField]float moveSpeed = 5f;
+    [SerializeField]float moveSpeed = 1f;
     private float prevDis;
     public override void OnEpisodeBegin()
     {
@@ -32,7 +32,7 @@ public class BoatAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(targetTransform.localPosition);
+        //sensor.AddObservation(targetTransform.localPosition);
         //sensor.AddObservation(pointA.transform.localPosition);
         sensor.AddObservation(pointB.transform.localPosition);
     }
@@ -61,14 +61,14 @@ public class BoatAgent : Agent
     private void Update()
     {
         float prevDis = 999f;
-        float currDis = Vector3.Distance(boat.transform.localPosition, pointB.transform.localPosition);
-        if (currDis < prevDis)
+        float currDis = Mathf.Abs(boat.transform.localPosition.y - pointB.transform.localPosition.y);
+        if (prevDis - currDis >= 1)
         {
-            SetReward(+0.1f);
+            AddReward(+0.01f);
         }
         else
         {
-            SetReward(-0.1f);
+            AddReward(-0.02f);
         }
         prevDis = currDis;
     }
@@ -77,25 +77,25 @@ public class BoatAgent : Agent
        
         if(other.TryGetComponent<Wall>(out Wall wall))
         {
-            SetReward(-1.0f);
+            SetReward(-10.0f);
             boat.GetComponent<Renderer>().material.color = Color.red;
             //EndEpisode();
         }
         if (other.TryGetComponent<Whale>(out Whale whale))
         {
-            SetReward(-1.0f);
+            SetReward(-15.0f);
             boat.GetComponent<Renderer>().material.color = Color.magenta;
             //EndEpisode();
         }
-        if (other.TryGetComponent<Checkpoint>(out Checkpoint cp))
+/*        if (other.TryGetComponent<Checkpoint>(out Checkpoint cp))
         {
             SetReward(+1.0f);
             boat.GetComponent<Renderer>().material.color = Color.yellow;
             
-        }
+        }*/
         if (other.TryGetComponent<Goal>(out Goal goal))
         {
-            SetReward(+1.0f);
+            SetReward(+15f);
             boat.GetComponent<Renderer>().material.color = Color.green;
             EndEpisode();
             accuracy += 1;

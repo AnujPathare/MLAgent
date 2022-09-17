@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - wall
+  - whale
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Whale
   - Water
   - UI
-  - 
+  - Wall
   - 
   - 
   - 

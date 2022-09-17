@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1663242129",
+        "python_version": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "D:\\Projects\\UnityML\\venv\\Scripts\\mlagents-learn config\\configBoat.yaml --run-id=NoWallWhale2 --force",
+        "mlagents_version": "0.29.0",
+        "mlagents_envs_version": "0.29.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.12.1+cu116",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1663242148"
+    },
+    "total": 19.126957,
+    "count": 1,
+    "self": 0.18323839999999691,
+    "children": {
+        "run_training.setup": {
+            "total": 0.4026821999999992,
+            "count": 1,
+            "self": 0.4026821999999992
+        },
+        "TrainerController.start_learning": {
+            "total": 18.541036400000003,
+            "count": 1,
+            "self": 0.001071600000003059,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 18.5399492,
+                    "count": 1,
+                    "self": 18.5399492
+                },
+                "trainer_threads": {
+                    "total": 8.999999998593466e-07,
+                    "count": 1,
+                    "self": 8.999999998593466e-07
+                },
+                "TrainerController._save_models": {
+                    "total": 1.4700000001255376e-05,
+                    "count": 1,
+                    "self": 1.4700000001255376e-05
+                }
+            }
+        }
+    }
+}

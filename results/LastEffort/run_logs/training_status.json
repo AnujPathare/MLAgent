@@ -1,0 +1,56 @@
+{
+    "BoatAgent": {
+        "checkpoints": [
+            {
+                "steps": 470206,
+                "file_path": "results\\LastEffort\\BoatAgent\\BoatAgent-470206.onnx",
+                "reward": null,
+                "creation_time": 1663272696.6350095,
+                "auxillary_file_paths": [
+                    "results\\LastEffort\\BoatAgent\\BoatAgent-470206.pt"
+                ]
+            },
+            {
+                "steps": 499706,
+                "file_path": "results\\LastEffort\\BoatAgent\\BoatAgent-499706.onnx",
+                "reward": null,
+                "creation_time": 1663273417.3429034,
+                "auxillary_file_paths": [
+                    "results\\LastEffort\\BoatAgent\\BoatAgent-499706.pt"
+                ]
+            },
+            {
+                "steps": 663290,
+                "file_path": "results\\LastEffort\\BoatAgent\\BoatAgent-663290.onnx",
+                "reward": -33.80000042915344,
+                "creation_time": 1663276050.84405,
+                "auxillary_file_paths": [
+                    "results\\LastEffort\\BoatAgent\\BoatAgent-663290.pt"
+                ]
+            },
+            {
+                "steps": 663290,
+                "file_path": "results\\LastEffort\\BoatAgent\\BoatAgent-663290.onnx",
+                "reward": null,
+                "creation_time": 1663276493.1145096,
+                "auxillary_file_paths": [
+                    "results\\LastEffort\\BoatAgent\\BoatAgent-663290.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 663290,
+            "file_path": "results\\LastEffort\\BoatAgent.onnx",
+            "reward": null,
+            "creation_time": 1663276493.1145096,
+            "auxillary_file_paths": [
+                "results\\LastEffort\\BoatAgent\\BoatAgent-663290.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.12.1+cu116"
+    }
+}

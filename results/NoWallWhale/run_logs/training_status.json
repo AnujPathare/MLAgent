@@ -1,0 +1,38 @@
+{
+    "BoatAgent": {
+        "checkpoints": [
+            {
+                "steps": 499710,
+                "file_path": "results\\NoWallWhale\\BoatAgent\\BoatAgent-499710.onnx",
+                "reward": 0.5499999523162842,
+                "creation_time": 1663241477.479071,
+                "auxillary_file_paths": [
+                    "results\\NoWallWhale\\BoatAgent\\BoatAgent-499710.pt"
+                ]
+            },
+            {
+                "steps": 530370,
+                "file_path": "results\\NoWallWhale\\BoatAgent\\BoatAgent-530370.onnx",
+                "reward": -0.8972971246049211,
+                "creation_time": 1663241750.4540756,
+                "auxillary_file_paths": [
+                    "results\\NoWallWhale\\BoatAgent\\BoatAgent-530370.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 530370,
+            "file_path": "results\\NoWallWhale\\BoatAgent.onnx",
+            "reward": -0.8972971246049211,
+            "creation_time": 1663241750.4540756,
+            "auxillary_file_paths": [
+                "results\\NoWallWhale\\BoatAgent\\BoatAgent-530370.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.12.1+cu116"
+    }
+}
